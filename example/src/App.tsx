@@ -1,13 +1,15 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-buzz-booster';
+import * as BuzzBooster from 'react-native-buzz-booster';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    BuzzBooster.init("307117684877774")
+    BuzzBooster.setUserId("damons")
+    BuzzBooster.showInAppMessage()
   }, []);
 
   return (

@@ -15,6 +15,18 @@ const BuzzBooster = NativeModules.BuzzBooster  ? NativeModules.BuzzBooster  : ne
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return BuzzBooster.multiply(a, b);
+export function init(appKey: string) {
+  return BuzzBooster.init(appKey);
+}
+
+export function setUserId(userId?: string) {
+  return BuzzBooster.setUserId(userId);
+}
+
+export function showInAppMessage() {
+  return BuzzBooster.showInAppMessage;
+}
+
+export function sendEvent(eventName: string, eventValues?: Map<string, string>) {
+  return BuzzBooster.sendEvent(eventName, eventValues)
 }

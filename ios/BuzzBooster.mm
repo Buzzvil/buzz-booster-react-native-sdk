@@ -19,6 +19,30 @@ RCT_REMAP_METHOD(multiply,
   resolve(result);
 }
 
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(initWithAppKey:(NSString *)appKey) {
+  BSTConfig *config = [BSTConfig configWithBlock:^(BSTConfigBuilder * _Nonnull builder) {
+    builder.appKey = appKey;
+  }];
+  [BuzzBooster initializeWithConfig:config];
+}
+
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(setUserId:(nullable NSString *)userId) {
+  [BuzzBooster setUserId:userId];
+}
+
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(showInAppMessage) {
+  UIViewController *vc = [UIApplication sharedApplication].delegate.window.rootViewController
+  [BuzzBooster showInAppMessageWithRootViewController:vc];
+}
+
+RCT_EXPORT_METHOD(sendEventWithEventName:(NSString *)eventName eventValues:(nullable NSDictionary<String *, String*> *)eventValues) {
+  if (eventValues) {
+    [BuzzBooster sendEventWithEventName:eventName eventValues:eventValues];
+  } else {
+    [BuzzBooster sendEventWithEventName:eventName];
+  }
+}
+
 // Don't compile this code when we build for the old architecture.
 #ifdef RCT_NEW_ARCH_ENABLED
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
