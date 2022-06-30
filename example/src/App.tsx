@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
 import * as BuzzBooster from 'react-native-buzz-booster';
+import { CampaignEntryView, CampaignFloatingActionButton } from 'react-native-buzz-booster';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
+  
   React.useEffect(() => {
     BuzzBooster.init("307117684877774")
     BuzzBooster.setUserId("damons")
@@ -14,7 +14,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <View style = {{ width: 100, height: 100 }}>
+        <Text>Go to Campaign</Text>
+      </View>
+      <CampaignFloatingActionButton style = {{ width: 100, height: 100 }}/>
     </View>
   );
 }
