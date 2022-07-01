@@ -17,7 +17,7 @@ class BuzzBoosterModule(
     }
 
     @ReactMethod
-    fun init(appKey: String) {
+    fun initAndroidApp(appKey: String) {
         val config = BuzzBoosterConfig(appKey)
         BuzzBooster.init(reactContext, config)
     }

@@ -15,7 +15,10 @@ import { CampaignEntryView, CampaignFloatingActionButton } from 'react-native-bu
 
 // ...
 export default function App() {
-    BuzzBooster.init("307117684877774")
+    BuzzBooster.init({
+        androidAppKey: "307117684877774",
+        iosAppKey: "279753136766115"
+    })
     BuzzBooster.setUserId("damons")
     BuzzBooster.showInAppMessage()
 

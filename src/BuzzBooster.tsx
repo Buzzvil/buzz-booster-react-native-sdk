@@ -14,8 +14,20 @@ const BuzzBooster = NativeModules.BuzzBooster  ? NativeModules.BuzzBooster  : ne
     }
   );
 
-export function init(appKey: string) {
-    BuzzBooster.init(appKey)
+
+interface AppKey {
+  androidAppKey: string
+  iosAppKey: string
+}
+export function init({androidAppKey,iosAppKey}: AppKey) {
+  if (Platform.OS === 'android') {
+    BuzzBooster.initAndroidApp(androidAppKey)
+  } else if (Platform.OS === 'ios') {
+    BuzzBooster.initIosApp(iosAppKey)
+  } else {
+    throw new Error("unsupported platform");
+  }
+    
 }
 
 export function setUserId(userId?: string) {

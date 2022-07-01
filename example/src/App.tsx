@@ -5,7 +5,10 @@ import * as BuzzBooster from 'react-native-buzz-booster';
 import { CampaignEntryView, CampaignFloatingActionButton } from 'react-native-buzz-booster';
 
 export default function App() {
-  BuzzBooster.init("307117684877774")
+  BuzzBooster.init({
+    androidAppKey: "307117684877774",
+    iosAppKey: "279753136766115"
+  })
   BuzzBooster.setUserId("damons")
   BuzzBooster.showInAppMessage()
   React.useEffect(() => {

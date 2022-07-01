@@ -7,7 +7,7 @@
 @implementation RNBuzzBooster
 RCT_EXPORT_MODULE(BuzzBooster) //Specify Module name for using in JS
 
-RCT_EXPORT_METHOD(init:(NSString *)appKey) {
+RCT_EXPORT_METHOD(initIosApp:(NSString *)appKey) {
   BSTConfig *config = [BSTConfig configWithBlock:^(BSTConfigBuilder * _Nonnull builder) {
     builder.appKey = appKey;
   }];
