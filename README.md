@@ -30,6 +30,12 @@ export default function App() {
 }
 ```
 
+## Deployment
+```sh
+npm adduser # when need new user
+npm publish
+```
+
 ## License
 
 MIT
