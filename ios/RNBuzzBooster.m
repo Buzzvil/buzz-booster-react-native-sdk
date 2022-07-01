@@ -7,6 +7,11 @@
 @implementation RNBuzzBooster
 RCT_EXPORT_MODULE(BuzzBooster) //Specify Module name for using in JS
 
+- (dispatch_queue_t)methodQueue
+{
+  return dispatch_get_main_queue();
+}
+
 RCT_EXPORT_METHOD(initIosApp:(NSString *)appKey) {
   BSTConfig *config = [BSTConfig configWithBlock:^(BSTConfigBuilder * _Nonnull builder) {
     builder.appKey = appKey;
