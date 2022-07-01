@@ -5,11 +5,11 @@ import * as BuzzBooster from 'react-native-buzz-booster';
 import { CampaignEntryView, CampaignFloatingActionButton } from 'react-native-buzz-booster';
 
 export default function App() {
-  
+  BuzzBooster.init("307117684877774")
+  BuzzBooster.setUserId("damons")
+  BuzzBooster.showInAppMessage()
   React.useEffect(() => {
-    BuzzBooster.init("307117684877774")
-    BuzzBooster.setUserId("damons")
-    BuzzBooster.showInAppMessage()
+    
   }, []);
 
   return (
@@ -17,6 +17,8 @@ export default function App() {
       <View style = {{ width: 100, height: 100 }}>
         <Text>Go to Campaign</Text>
       </View>
+      
+      <CampaignEntryView style = {{ width: 100, height: 100 }}></CampaignEntryView>
       <CampaignFloatingActionButton style = {{ width: 100, height: 100 }}/>
     </View>
   );
