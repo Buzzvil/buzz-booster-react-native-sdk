@@ -4,7 +4,8 @@ BuzzBooster React Native SDK
 ## Installation
 
 ```sh
-npm install react-native-buzz-booster```
+npm install react-native-buzz-booster
+```
 
 ## Usage
 
