@@ -1,7 +1,7 @@
 {
   "name": "react-native-buzz-booster",
   "version": "0.1.0",
-  "description": "test",
+  "description": "BuzzBooster React Native SDK",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/Buzzvil/buzz-sdk-samples",
+  "repository": "https://github.com/Buzzvil/buzz-booster-react-native-sdk",
   "author": "Gongcu <damon.gong@buzzvil.com> (https://buzzbooster.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Buzzvil/buzz-sdk-samples/issues"
+    "url": "https://github.com/Buzzvil/buzz-booster-react-native-sdk/issues"
   },
-  "homepage": "https://github.com/Buzzvil/buzz-sdk-samples#readme",
+  "homepage": "https://buzzbooster.io",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

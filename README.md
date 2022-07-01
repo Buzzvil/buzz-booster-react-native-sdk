@@ -1,5 +1,6 @@
 # react-native-buzz-booster
 BuzzBooster React Native SDK
+
 ## Installation
 
 ```sh
@@ -7,22 +8,28 @@ npm install react-native-buzz-booster```
 
 ## Usage
 
-```js
-import { multiply } from "react-native-buzz-booster";
+```ts
+import * as BuzzBooster from 'react-native-buzz-booster';
+import { CampaignEntryView, CampaignFloatingActionButton } from 'react-native-buzz-booster';
 
 // ...
+export default function App() {
+    BuzzBooster.init("307117684877774")
+    BuzzBooster.setUserId("damons")
+    BuzzBooster.showInAppMessage()
 
-const result = await multiply(3, 7);
+    return (
+    <View style={styles.container}>
+      <View style = {{ width: 100, height: 100 }}>
+        <Text>Go to Campaign</Text>
+        <CampaignEntryView style = {{ width: 100, height: 100 }}></CampaignEntryView>
+      </View>
+      <CampaignFloatingActionButton style = {{ width: 100, height: 100 }}/>
+    </View>
+  );
+}
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
 ## License
 
 MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
