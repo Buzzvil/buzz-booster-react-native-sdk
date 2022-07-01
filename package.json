@@ -1,6 +1,6 @@
 {
   "name": "react-native-buzz-booster",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "BuzzBooster React Native SDK",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
