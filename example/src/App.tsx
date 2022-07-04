@@ -22,7 +22,7 @@ export default function App() {
       </View>
       
       <CampaignEntryView style = {{ width: 100, height: 100 }}></CampaignEntryView>
-      <CampaignFloatingActionButton style = {{ width: 100, height: 100 }}/>
+      <CampaignFloatingActionButton style={styles.fab}/>
     </View>
   );
 }
@@ -38,4 +38,11 @@ const styles = StyleSheet.create({
     height: 60,
     marginVertical: 20,
   },
+  fab: {
+    width: 100,
+    height: 100,
+    bottom: 20,
+    right: 20,
+    position: 'absolute',
+  }
 });

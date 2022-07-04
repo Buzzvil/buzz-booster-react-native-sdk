@@ -1,0 +1,4 @@
+method_name,args_name0,args_type0,args_name1,args_type1,args_name2,args_type2
+setUserId,userId?,string
+sendEvent,eventName,string,eventValues?,"Map<string, string>"
+showInAppMessage
